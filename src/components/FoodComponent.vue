@@ -4,11 +4,11 @@
             <i class="fa fa-heart-o" aria-hidden="true"></i>
         </div>
         <div class="image_wrapper">
-            <img src="@/assets/product.jpg" class="image" alt="" srcset="">
+            <img :src="img" class="image" alt="" srcset="">
         </div>
         <div>
             <div class="title">
-                Carrot Burger
+                {{ title }}
             </div>
             <div class="rating"> 
                 rating <i class="fa fa-star text-red" aria-hidden="true"></i>
@@ -18,7 +18,10 @@
 </template>
 
 <script setup lang="ts" >
-
+    const props = defineProps<{
+    title: string,
+    img: string
+    }>()
 </script>
 
 <style scoped>

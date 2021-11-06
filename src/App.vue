@@ -18,6 +18,7 @@ import Homepage from "@/pages/homepage.vue";
 
   @import url('https://fonts.googleapis.com/css2?family=Manrope&family=Merriweather:ital@0;1&family=Mukta&family=Roboto+Slab&display=swap');
 
+  @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css";
   body { 
     margin: 0;
     font-family: 'Manrope', sans-serif;

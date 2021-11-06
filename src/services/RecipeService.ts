@@ -2,7 +2,7 @@ import http from "../http-common";
 
 class RecipeDataService {
   getAll() {
-    return http.get("/categories.php");
+    return http.get("/filter.php?a=Indian");
   }
 
 }

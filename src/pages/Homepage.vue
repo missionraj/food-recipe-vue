@@ -1,15 +1,7 @@
 <template>
     <div class="container" >
-        <FoodComponent ></FoodComponent>         
-        <FoodComponent ></FoodComponent>         
-        <FoodComponent ></FoodComponent>         
-        <FoodComponent ></FoodComponent>         
-        <FoodComponent ></FoodComponent>         
-        <FoodComponent ></FoodComponent>         
-        <FoodComponent ></FoodComponent>         
-        <FoodComponent ></FoodComponent>         
-        <FoodComponent ></FoodComponent>         
-        <FoodComponent ></FoodComponent>         
+
+        <FoodComponent v-for="meal in meals" :title="meal.strMeal" :img="meal.strMealThumb" ></FoodComponent>         
     </div>
 </template>
 
@@ -18,12 +10,11 @@ import { onMounted, ref } from "vue";
 import FoodComponent from "@/components/FoodComponent.vue";
 import RecipeDataService from "@/services/RecipeService";
 
-const data = ref([]);
+const meals = ref([]);
 onMounted(()=> { 
     RecipeDataService.getAll().then((res)=>{ 
-        data.value = res.data.categories
-        console.log(data.value);
-        
+        console.log("recipe meals .....", res.data.meals);
+        meals.value = res.data.meals
     })
 
 })
@@ -40,4 +31,9 @@ onMounted(()=> {
         background:rgb(207, 205, 205);
     }
 
+    @media only screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    }
 </style>
