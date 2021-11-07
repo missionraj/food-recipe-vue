@@ -1,7 +1,7 @@
 <template >
     <div class="foodcard">
-        <div>
-            <i class="fa fa-heart-o" aria-hidden="true"></i>
+        <div class="p-2">
+            <i class="fa fa-heart-o heart" aria-hidden="true"></i>
         </div>
         <div class="image_wrapper">
             <img :src="img" class="image" alt="" srcset="">
@@ -41,6 +41,12 @@
 
     .rating {
         color: #cacaca;
+    }
+
+    .heart { 
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
     }
 
 </style>

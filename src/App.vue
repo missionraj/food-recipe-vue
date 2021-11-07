@@ -2,16 +2,13 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import Homepage from "@/pages/homepage.vue";
+import Header from "@/components/Header.vue";
+
 
 </script>
 
 <template>
-  <div >
-    <div> title </div>
-    <div class="pages">
-      <Homepage /> 
-    </div>
-  </div>
+  <router-view></router-view> 
 </template>
 
 <style>
@@ -27,8 +24,13 @@ import Homepage from "@/pages/homepage.vue";
     font-family: 'Roboto Slab', serif;
   }
 
-
   .text-red {
     color: red;
   }
+
+  .p-2 {
+    padding: 10px;
+  }
+
+  
 </style>
