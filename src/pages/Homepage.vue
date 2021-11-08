@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="container" >
-        <FoodComponent v-for="meal in meals" :title="meal.strMeal" :img="meal.strMealThumb" ></FoodComponent>         
+        <FoodComponent v-for="meal in meals" :title="meal.strMeal" :img="meal.strMealThumb" :id="meal.idMeal" ></FoodComponent>         
     </div>
 </template>
 

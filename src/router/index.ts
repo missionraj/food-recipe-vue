@@ -5,7 +5,7 @@ import RecipePage from "@/pages/RecipePage.vue"
 
 const routes = [
     { path: '/', component: HomePage },
-    { path: '/recipe', component: RecipePage }
+    { path: '/recipe/:id', component: RecipePage }
 ]
   
 // 3. Create the router instance and pass the `routes` option

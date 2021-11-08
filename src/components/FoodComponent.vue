@@ -4,7 +4,9 @@
             <i class="fa fa-heart-o heart" aria-hidden="true"></i>
         </div>
         <div class="image_wrapper">
-            <img :src="img" class="image" alt="" srcset="">
+            <router-link :to="{ path: `/recipe/${id}` }">
+                <img :src="img" class="image" alt="" srcset="">
+            </router-link> | 
         </div>
         <div>
             <div class="title">
@@ -18,10 +20,16 @@
 </template>
 
 <script setup lang="ts" >
+    import { onMounted } from "vue";
     const props = defineProps<{
     title: string,
-    img: string
+    img: string,
+    id:string
     }>()
+    onMounted(()=>{
+        
+    })
+    
 </script>
 
 <style scoped>

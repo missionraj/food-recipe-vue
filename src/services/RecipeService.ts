@@ -10,6 +10,10 @@ class RecipeDataService {
     return http.get(`/search.php?s=${text}`)
   }
 
+
+  getRecipeDetails(id: string) { 
+    return http.get(`/lookup.php?i=${id}`);
+  }
 }
 
 export default new RecipeDataService();
